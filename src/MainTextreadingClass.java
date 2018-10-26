@@ -11,10 +11,10 @@ public class MainTextreadingClass {
     private static char textstorevalue;
     public static String sentencestorage;
     private static double textpoint;
-    private static double sentencelength;
+    public static double sentencelength;
 
 
-    public static Scanner fileclass() {
+    public static void main(String[]args) {
         NeuronClass neuralfunction;
         neuralfunction = new NeuronClass();
         try {
@@ -29,7 +29,6 @@ public class MainTextreadingClass {
             e.printStackTrace();
             System.out.print(e);
         }
-        return null;
     }
 
     public static void wordvectormaker(ArrayList<Float>Wordvectors) {
@@ -45,14 +44,22 @@ public class MainTextreadingClass {
         wordcatgoeryUppercase[8] = 'I';
         wordcatgoeryUppercase[9] = 'J';
         wordcatgoeryUppercase[10] = 'K';
+        wordcatgoeryUppercase[11] = 'L';
+        wordcatgoeryUppercase[12] = 'M';
+        wordcatgoeryUppercase[13] = 'N';
+        wordcatgoeryUppercase[14] = 'O';
     }
 
-    public static ArrayList<ArrayList<Double>>wordvectorsorter() {
-        return null;
+    public static void wordvectorsorter() {
+        int i = 0;
+        int j = 0;
+        int k = 0;
     }
 
-    private static ArrayList<Double> vectormatricies(ArrayList<Double>Wordvector) {
-        return Wordvector;
+    private static void vectormatrtices() {
+        int i = 0;
+        int j = 0;
+        int k = 0;
     }
 
 }

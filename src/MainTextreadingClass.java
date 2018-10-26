@@ -33,7 +33,18 @@ public class MainTextreadingClass {
     }
 
     public static void wordvectormaker(ArrayList<Float>Wordvectors) {
-
+        int[]wordcatgoeryUppercase = new int[100];
+        wordcatgoeryUppercase[0] = 'A';
+        wordcatgoeryUppercase[1] = 'B';
+        wordcatgoeryUppercase[2] = 'C';
+        wordcatgoeryUppercase[3] = 'D';
+        wordcatgoeryUppercase[4] = 'E';
+        wordcatgoeryUppercase[5] = 'F';
+        wordcatgoeryUppercase[6] = 'G';
+        wordcatgoeryUppercase[7] = 'H';
+        wordcatgoeryUppercase[8] = 'I';
+        wordcatgoeryUppercase[9] = 'J';
+        wordcatgoeryUppercase[10] = 'K';
     }
 
     public static ArrayList<ArrayList<Double>>wordvectorsorter() {

@@ -77,6 +77,9 @@ public class MainTextreadingClass {
                 int Parthensisvalue = Avalue - 4;
                 int slashvalue = Avalue + 6;
                 int Slashvalue = Avalue - 5;
+                String slash = " / ";
+                String period = " (.) ";
+                String comma = " (,) ";
 
 
                 for(int value = 0; value < sorter.length(); value = value + 1) {
@@ -104,7 +107,7 @@ public class MainTextreadingClass {
                         characterstoring.add(sorter);
                         data[value][fvalue] = Fvalue;
                     }
-                    if(sorter.charAt(value) == 'G') {
+                    if(sorter.charAt(value) == 'G' || sorter.charAt(value) == 'g') {
                         characterstoring.add(sorter);
                         data[value][gvalue] = Gvalue;
                     }
@@ -185,23 +188,22 @@ public class MainTextreadingClass {
                         data[value][zvalue] = Zvalue;
                     }
                     if(sorter.charAt(value) == '.') {
-                        puncuationstorage.add(sorter);
+                        puncuationstorage.add(period);
                         data[value + 1][Puncationvaluesperiod] = puncationvaluesperiod;
                     }
                     if(sorter.charAt(value) == ',') {
-                        puncuationstorage.add(sorter);
+                        puncuationstorage.add(comma);
                         data[value + 2][Commavalue] = commavalue;
                     }
                     if(sorter.charAt(value) == '/') {
-                        puncuationstorage.add(sorter);
+                        puncuationstorage.add(slash);
                         data[value + 3][Slashvalue] = slashvalue;
                     }
-                    Collections.sort(characterstoring);
                 }
             }
             datareading();
             datasetsorter();
-            System.out.println(characterstoring.get(0));
+            System.out.println(puncuationstorage);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -300,6 +302,10 @@ public class MainTextreadingClass {
                     }
                     if(datastring.charAt(vectorvals) == 'H') {
                         datamatrix[vectorvals][vectorh] = vectorH;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'I') {
+                        datamatrix[vectorvals][vectori] = vectorI;
                         trainingdata.add(datastring);
                     }
                 }

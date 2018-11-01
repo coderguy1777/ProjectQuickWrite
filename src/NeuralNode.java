@@ -1,4 +1,3 @@
-
 public class NeuralNode<T> {
 
     T value;

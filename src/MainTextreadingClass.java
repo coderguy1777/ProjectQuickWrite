@@ -111,7 +111,7 @@ public class MainTextreadingClass {
                         characterstoring.add(sorter);
                         data[value][gvalue] = Gvalue;
                     }
-                    if(sorter.charAt(value) == 'H') {
+                    if(sorter.charAt(value) == 'H' || sorter.charAt(value) == 'h') {
                         characterstoring.add(sorter);
                         data[value][hvalue] = Hvalue;
                     }

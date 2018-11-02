@@ -115,15 +115,15 @@ public class MainTextreadingClass {
                         characterstoring.add(sorter);
                         data[value][hvalue] = Hvalue;
                     }
-                    if(sorter.charAt(value) == 'I') {
+                    if(sorter.charAt(value) == 'I' || sorter.charAt(value) == 'i') {
                         characterstoring.add(sorter);
                         data[value][ivalue] = Ivalue;
                     }
-                    if(sorter.charAt(value) == 'J') {
+                    if(sorter.charAt(value) == 'J' || sorter.charAt(value) == 'j') {
                         characterstoring.add(sorter);
                         data[value][jvalue] = Jvalue;
                     }
-                    if(sorter.charAt(value) == 'K') {
+                    if(sorter.charAt(value) == 'K' || sorter.charAt(value) == 'k') {
                         characterstoring.add(sorter);
                         data[value][kvalue] = Kvalue;
                     }
@@ -203,7 +203,7 @@ public class MainTextreadingClass {
             }
             datareading();
             datasetsorter();
-            System.out.println(puncuationstorage);
+            System.out.println(trainingdata);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -211,8 +211,6 @@ public class MainTextreadingClass {
         }
     }
     private static void datareading() {
-        int vectorvalues = 0;
-        String vectorscanner = "";
         try {
             Scanner scan;
             scan = new Scanner(new BufferedReader(new FileReader("DSWordData")));
@@ -272,27 +270,27 @@ public class MainTextreadingClass {
                 int vectorz = 25;
 
                 for(int vectorvals = 0; vectorvals < datastring.length(); vectorvals++) {
-                    if(datastring.charAt(vectorvals) == 'A') {
+                    if(datastring.charAt(vectorvals) == 'A' || datastring.charAt(vectorvals) == 'a') {
                         datamatrix[vectorvals][vectora] = vectorA;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'B') {
+                    if(datastring.charAt(vectorvals) == 'B' || datastring.charAt(vectorvals) == 'b') {
                         datamatrix[vectorvals][vectorb] = vectorB;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'C') {
+                    if(datastring.charAt(vectorvals) == 'C' || datastring.charAt(vectorvals) == 'c') {
                         datamatrix[vectorvals][vectorc] = vectorC;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'D') {
+                    if(datastring.charAt(vectorvals) == 'D' || datastring.charAt(vectorvals) == 'd') {
                         datamatrix[vectorvals][vectord] = vectorD;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'E') {
+                    if(datastring.charAt(vectorvals) == 'E' || datastring.charAt(vectorvals) == 'e') {
                         datamatrix[vectorvals][vectore] = vectorE;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'F') {
+                    if(datastring.charAt(vectorvals) == 'F' || datastring.charAt(vectorvals) == 'f') {
                         datamatrix[vectorvals][vectorf] = vectorF;
                         trainingdata.add(datastring);
                     }
@@ -306,6 +304,18 @@ public class MainTextreadingClass {
                     }
                     if(datastring.charAt(vectorvals) == 'I') {
                         datamatrix[vectorvals][vectori] = vectorI;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'J' || datastring.charAt(vectorvals) == 'j') {
+                        datamatrix[vectorvals][vectorj] = vectorJ;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'K' || datastring.charAt(vectorvals) == 'k') {
+                        datamatrix[vectorvals][vectork] = vectork;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'L' || datastring.charAt(vectorvals) == 'l') {
+                        datamatrix[vectorvals][vectorl] = vectorL;
                         trainingdata.add(datastring);
                     }
                 }

@@ -80,8 +80,7 @@ public class MainTextreadingClass {
                 String slash = " / ";
                 String period = " (.) ";
                 String comma = " (,) ";
-
-
+                String parthensis = " ( ";
                 for(int value = 0; value < sorter.length(); value = value + 1) {
                     if(sorter.charAt(value) == 'A' || sorter.charAt(value) == 'a') {
                         characterstoring.add(sorter);
@@ -127,15 +126,15 @@ public class MainTextreadingClass {
                         characterstoring.add(sorter);
                         data[value][kvalue] = Kvalue;
                     }
-                    if(sorter.charAt(value) == 'L') {
+                    if(sorter.charAt(value) == 'L' || sorter.charAt(value) == 'l') {
                         characterstoring.add(sorter);
                         data[value][lvalue] = Lvalue;
                     }
-                    if(sorter.charAt(value) == 'M') {
+                    if(sorter.charAt(value) == 'M' || sorter.charAt(value) == 'm') {
                         characterstoring.add(sorter);
                         data[value][mvalue] = Mvalue;
                     }
-                    if(sorter.charAt(value) == 'N') {
+                    if(sorter.charAt(value) == 'N' || sorter.charAt(value) == 'n') {
                         characterstoring.add(sorter);
                         data[value][nvalue] = Nvalue;
                     }
@@ -189,7 +188,7 @@ public class MainTextreadingClass {
                     }
                     if(sorter.charAt(value) == '.') {
                         puncuationstorage.add(period);
-                        data[value + 1][Puncationvaluesperiod] = puncationvaluesperiod;
+                        data[value + 1][puncationvaluesperiod] = Puncationvaluesperiod;
                     }
                     if(sorter.charAt(value) == ',') {
                         puncuationstorage.add(comma);
@@ -198,6 +197,10 @@ public class MainTextreadingClass {
                     if(sorter.charAt(value) == '/') {
                         puncuationstorage.add(slash);
                         data[value + 3][Slashvalue] = slashvalue;
+                    }
+                    if(sorter.charAt(value) == '(') {
+                        puncuationstorage.add(parthensis);
+                        data[value + 4][parthensisvalue] = Parthensisvalue;
                     }
                 }
             }
@@ -294,15 +297,15 @@ public class MainTextreadingClass {
                         datamatrix[vectorvals][vectorf] = vectorF;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'G') {
+                    if(datastring.charAt(vectorvals) == 'G' || datastring.charAt(vectorvals) == 'g') {
                         datamatrix[vectorvals][vectorg] = vectorG;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'H') {
+                    if(datastring.charAt(vectorvals) == 'H' || datastring.charAt(vectorvals) == 'h') {
                         datamatrix[vectorvals][vectorh] = vectorH;
                         trainingdata.add(datastring);
                     }
-                    if(datastring.charAt(vectorvals) == 'I') {
+                    if(datastring.charAt(vectorvals) == 'I' || datastring.charAt(vectorvals) == 'i') {
                         datamatrix[vectorvals][vectori] = vectorI;
                         trainingdata.add(datastring);
                     }
@@ -311,11 +314,67 @@ public class MainTextreadingClass {
                         trainingdata.add(datastring);
                     }
                     if(datastring.charAt(vectorvals) == 'K' || datastring.charAt(vectorvals) == 'k') {
-                        datamatrix[vectorvals][vectork] = vectork;
+                        datamatrix[vectorvals][vectork] = vectorK;
                         trainingdata.add(datastring);
                     }
                     if(datastring.charAt(vectorvals) == 'L' || datastring.charAt(vectorvals) == 'l') {
                         datamatrix[vectorvals][vectorl] = vectorL;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'M' || datastring.charAt(vectorvals) == 'm') {
+                        datamatrix[vectorvals][vectorm] = vectorM;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'N' || datastring.charAt(vectorvals) == 'n') {
+                        datamatrix[vectorvals][vectorn] = vectorN;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'O' || datastring.charAt(vectorvals) == 'o') {
+                        datamatrix[vectorvals][vectoro] = vectorO;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'P' || datastring.charAt(vectorvals) == 'p') {
+                        datamatrix[vectorvals][vectorp] = vectorP;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'Q' || datastring.charAt(vectorvals) == 'q') {
+                        datamatrix[vectorvals][vectorq] = vectorQ;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'R' || datastring.charAt(vectorvals) == 'r') {
+                        datamatrix[vectorvals][vectorr] = vectorR;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'S' || datastring.charAt(vectorvals) == 's') {
+                        datamatrix[vectorvals][vectors] = vectorS;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'T' || datastring.charAt(vectorvals) == 't') {
+                        datamatrix[vectorvals][vectort] = vectorT;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'U' || datastring.charAt(vectorvals) == 'u') {
+                        datamatrix[vectorvals][vectoru] = vectorU;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'V' || datastring.charAt(vectorvals) == 'v') {
+                        datamatrix[vectorvals][vectorv] = vectorV;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'W' || datastring.charAt(vectorvals) == 'w') {
+                        datamatrix[vectorvals][vectorw] = vectorW;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'X' || datastring.charAt(vectorvals) == 'x') {
+                        datamatrix[vectorvals][vectorx] = vectorX;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'Y' || datastring.charAt(vectorvals) == 'y') {
+                        datamatrix[vectorvals][vectory] = vectorY;
+                        trainingdata.add(datastring);
+                    }
+                    if(datastring.charAt(vectorvals) == 'Z' || datastring.charAt(vectorvals) == 'z') {
+                        datamatrix[vectorvals][vectorz] = vectorZ;
                         trainingdata.add(datastring);
                     }
                 }
